@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="../common/d3.min.js"></script>
+    <script src="../common/MyColor.min.js"></script>
+    <script src="../common/help_fun.min.js"></script>
+    <script src="../common/lang.min.js"></script>
+    <script src="Param.min.js"></script>
+    <script src="figue.min.js"></script>
+    <script src="fun_heat.min.js"></script>
+    <script src="heat.min.js"></script>
+  </head>
+  <body>
+    <div id="div2" style="padding: 20px;"></div>
+  </body>
+</html>
+<script>
+
+
+
+
+  var tableData = {
+    colnames: ["AA","BB","CC","DD","EE","FF","GG","HH"],
+    rownames: ["1","2","3","4","5","6"],
+    data: [
+        ["44.3191166666667", "17.1269666666667", "5.53395", "17.92555", "13.13005", "1.03881666666667", "0.444133333333333", "0.131333333333333"],
+        ["53.45405", "17.0334", "18.0537333333333", "1.40798333333333", "6.94635", "2.70016666666667", "0.1276", "0.11885"],
+        ["46.60165", "26.6552333333333", "10.53385", "6.08865", "5.80846666666667", "3.63743333333333", "0.1911", "0.21455"],
+        ["53.5345", "26.4490666666667", "13.17095", "1.47755", "3.82473333333333", "1.2229", "0.126783333333333", "0.0148333333333333"],
+        ["45.2991333333333", "46.1513666666667", "3.34878333333333", "2.20845", "2.36396666666667", "0.2978", "0.0850333333333333", "0.00468333333333333"],
+        ["36.7901", "37.91066", "5.88892", "16.67188", "2.26398", "0.15516", "0.10676", "0.00488"],
+   ],
+   pdata:[],
+  };
+
+
+  //一般热图
+  var div2 = new Param({
+    id: "div2",
+    drawObj: HEAT,
+    showPstar: false, //参数栏里是否显示 p值标记 参数
+    showScaleSetPara: true, //参数栏里不显示 是否归一化 参数
+    drawData: {
+      lang: "zh", //语言为中文
+      initData: tableData, //作图数据
+      basicData: tableData,
+      scale_set: "all", //格式化 'row' 'col' 'none'
+      cluster_set: "all", //聚类   'row' 'col' 'none'
+      title: "bbb", //标题
+      show_helpline:'all',
+      rowCu:'1,2,3,4,5,6,7,8,9,10,11,12,14',
+      colCu:'1,2,3,4,5,6,7,8,9',
+      // XmoduleShow:true,   //x轴颜色模块显示
+      // YmoduleShow:true,   //y轴颜色模块显示
+    },
+  });
+
+
+
+
+
+</script>
